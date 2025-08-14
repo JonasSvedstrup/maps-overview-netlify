@@ -1,17 +1,14 @@
 <script setup>
 useHead({
   htmlAttrs: { lang: 'en-UK' },
-  title: 'Nuxt Starter',
+  title: 'Map Overview - Cities Skylines',
   meta: [
     {
       name: 'description',
       content:
-        'Nuxt Starter is a minimal template created for quick landing pages, built with Nuxt and Tailwind CSS.',
+        'Map Overview - Here is a list of all the maps in Cities Skylines',
     },
   ],
-  bodyAttrs: {
-    class: 'font-display',
-  },
 });
 </script>
 
