@@ -1,15 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ["~/assets/css/main.css"],
+  css: ['~/assets/css/main.css'],
   vite: {
-    plugins: [
-      tailwindcss(),
-    ],
+    plugins: [tailwindcss()],
   },
   experimental: { appManifest: false },
-  modules: ["nuxt-icon", "@nuxt/image"],
-  compatibilityDate: "2024-12-18",
+  modules: ['nuxt-icon', '@nuxt/image', '@pinia/nuxt'],
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
+  compatibilityDate: '2024-12-18',
 });

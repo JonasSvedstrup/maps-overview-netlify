@@ -1,36 +1,42 @@
 <script setup>
-import pageData from '@/data/index.json'
-const page = ref(pageData)
-
+import GridTable from '@/components/GridTable.vue';
+import {
+  getGridTableMapsOverviewColumns,
+  getGridTableMapsOverviewRows,
+} from '@/scripts/gridTable';
+import rawMapsData from '../data/maps.json';
 definePageMeta({
-  layout: "default",
+  layout: 'default',
 });
 </script>
 
 <template>
-  <Container>
-    <Hero
-      :title="page.hero.title"
-      :description="page.hero.description"
-      :image="page.hero.image"
-      :imageAlt="page.hero.imageAlt"
-      :buttons="page.hero.buttons"
-    ></Hero>
-    <Logos :title="page.logos.title" :icons="page.logos.icons"></Logos>
-    <Features
-      :title="page.features.title"
-      :description="page.features.description"
-      :items="page.features.items"
-    ></Features>
-    <Testimonials
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-      :items="page.testimonials.items"
-    ></Testimonials>
-    <Cta
-      :title="page.cta.title"
-      :description="page.cta.description"
-      :buttons="page.cta.buttons"
-    ></Cta>
-  </Container>
+  <main id="main-overview">
+    <section>
+      <h1>Maps Overview</h1>
+      <h2>Cities Skylines</h2>
+      <p>
+        Welcome to <a href="">Cities Skylines</a> Maps Overview, a page where
+        you can inspect and compare maps before deciding where to build your
+        next city. This site includes a list of all the maps in Cities
+        Skylines.<br />
+      </p>
+      <p>
+        This includes the downloadable content: Snowfall, Natural Disasters,
+        Mass Transit, Green Cities, Parklife, Industries, Campus, Sunset Harbor,
+        Airports, Plazas and Promenades, Financial Districts, Hotels & Retreats,
+        Map Pack 1, Map Pack 2, Map Pack 3
+      </p>
+    </section>
+    <section>
+      <h2>Maps list</h2>
+    </section>
+    <section class="full-width">
+      <GridTable
+        :columns="getGridTableMapsOverviewColumns()"
+        :height="514"
+        :rows="getGridTableMapsOverviewRows(rawMapsData)"
+      />
+    </section>
+  </main>
 </template>

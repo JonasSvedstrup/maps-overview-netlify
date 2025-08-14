@@ -1,0 +1,48 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --c-white-soft: #94b4c1;
+  --c-black: #213448;
+  --c-orange: #94b4c1;
+  --c-orange-dark: #94b4c1;
+
+  --c-white: #ffffff;
+  --c-blue-dark-a: #141e32;
+  --c-blue-dark-b: #1a2640;
+}
+
+:root {
+  --color-text: var(--c-white);
+  --color-text-soft: var(--c-white-soft);
+  --color-link: var(--c-white-soft);
+  --color-link-hover: var(--c-orange-dark);
+  --color-link-active: var(--c-orange);
+  --color-border: var(--c-white-soft);
+  --color-cell-link: var(---c-black);
+  --color-button-background: var(--c-blue-dark-b);
+  --color-button-active: var(--c-white-soft);
+  --color-button-hover: var(--c-white-soft);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--c-blue-dark-a);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

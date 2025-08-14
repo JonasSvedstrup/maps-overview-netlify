@@ -1,7 +1,12 @@
 <template>
-  <footer class="my-20">
-    <p class="text-sm text-center text-zinc-600">
-      Copyright &copy; {{ new Date().getFullYear() }} Nuxt Starter. Powered by <a href="https://www.netlify.com/" class="underline">Netlify</a>.
-    </p>
+  <footer>
+    <section>
+      <p>
+        This site is not affiliated with Paradox Interactive<br />
+        Screenshots are taken from the game.<br />
+        Last updated 2025-08-12T14:21:37.347Z
+        <!-- new Date().toISOString() -->
+      </p>
+    </section>
   </footer>
 </template>
