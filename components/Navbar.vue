@@ -1,12 +1,12 @@
 <script setup>
 const menuitems = [
   {
-    title: "Sign up",
-    url: "https://app.netlify.com/signup",
+    title: "Map",
+    url: "/map",
   },
   {
-    title: "Log in",
-    url: "https://app.netlify.com/login",
+    title: "About",
+    url: "/about",
   },
 ];
 </script>
