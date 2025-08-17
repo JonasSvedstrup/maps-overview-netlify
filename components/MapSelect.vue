@@ -2,6 +2,16 @@
 import { formatMapShort, pickSelectedMap } from '@/scripts/util';
 import rawMapsData from '../data/maps.json';
 
+console.log({ rawMapsData });
+
+const mapList = rawMapsData
+  .map(map => {
+    return map.name;
+  })
+  .sort();
+
+console.log({ mapList });
+
 const onChange = (event: Event) => {
   const target = event.target as HTMLButtonElement;
 
@@ -18,11 +28,11 @@ defineProps<{
 <template>
   <select class="select" @change="onChange($event)">
     <option
-      v-for="map in rawMapsData"
-      v-bind:key="map.name"
-      :selected="formatMapShort(map.name) === selectedMap"
+      v-for="name in mapList"
+      v-bind:key="name"
+      :selected="formatMapShort(name) === selectedMap"
     >
-      {{ map.name }}
+      {{ name }}
     </option>
   </select>
 </template>
