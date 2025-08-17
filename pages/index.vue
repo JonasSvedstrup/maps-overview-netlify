@@ -30,6 +30,10 @@ definePageMeta({
     </section>
     <section>
       <h2>Maps list</h2>
+      <p>
+        Screenshots have only been taken and prepared for the maps with Yes in
+        the column 'Img'.
+      </p>
     </section>
     <section class="full-width">
       <GridTableMaps

@@ -22,7 +22,7 @@ defineProps<{
       :columnDefs="columns"
       :domLayout="domLayout"
       :pagination="true"
-      :paginationPageSize="10"
+      :paginationPageSize="100"
       :paginationPageSizeSelector="[10, 50, 100]"
       :style="height ? `height: ${height}px` : ''"
     />

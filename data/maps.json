@@ -462,7 +462,7 @@
       65000,
       80000
     ],
-    "hasImages": false
+    "hasImages": true
   },
   {
     "name": "Prussian Peaks",
@@ -853,7 +853,7 @@
       "ship": false,
       "air": true
     },
-    "hasImages": false
+    "hasImages": true
   },
   {
     "name": "Marin Bay",
@@ -904,7 +904,7 @@
       "ship": false,
       "air": true
     },
-    "hasImages": false
+    "hasImages": true
   },
   {
     "name": "Desert Oasis",
