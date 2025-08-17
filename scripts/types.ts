@@ -33,6 +33,7 @@ export type AuthorData = {
 
 export type ColDefs = {
   field: string;
+  headerName?: string;
   width?: number;
   cellRenderer?: unknown;
   hide?: boolean;
@@ -50,6 +51,7 @@ export type MapsRowData = {
   ship: boolean;
   air: boolean;
   link: string;
+  screenshots: string;
 };
 
 export type PlaylistRowData = {

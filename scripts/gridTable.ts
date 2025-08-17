@@ -7,7 +7,12 @@ import type {
   PlaylistRowData,
   PlaylistsData,
 } from './types';
-import { formatMapLink, formatNumer, linkField } from './util';
+import {
+  formatBooleanToText,
+  formatMapLink,
+  formatNumer,
+  linkField,
+} from './util';
 
 export const getGridTableMapsOverviewColumns = (): ColDefs[] => [
   {
@@ -16,7 +21,7 @@ export const getGridTableMapsOverviewColumns = (): ColDefs[] => [
     cellRenderer: (params: ICellRendererParams) =>
       linkField(params.data.link, params.value),
   },
-  { field: 'dlc' },
+  { field: 'dlc', headerName: 'DLC' },
   { field: 'buildableArea', width: 130 },
   { field: 'theme', width: 110 },
   { field: 'littleHamlet', width: 120 },
@@ -26,14 +31,13 @@ export const getGridTableMapsOverviewColumns = (): ColDefs[] => [
   { field: 'ship', width: 90 },
   { field: 'air', width: 90 },
   { field: 'link', hide: true },
+  { field: 'screenshots' },
 ];
 
 export const getGridTableMapsOverviewRows = (
   data: MapsData[]
 ): MapsRowData[] => {
   const rowData: MapsRowData[] = [];
-
-  console.log(data);
 
   data.forEach(d => {
     const { milestones } = d;
@@ -53,6 +57,7 @@ export const getGridTableMapsOverviewRows = (
       ship: d.connections.ship,
       air: d.connections.air,
       link: formatMapLink(d.name),
+      screenshots: formatBooleanToText(d.hasImages),
     });
   });
 

@@ -12,6 +12,7 @@ export const formatNumer = (number: number) =>
   number ? number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') : '';
 export const linkField = (link: string, value: string) =>
   `<a href="${link}">${value}</a>`;
+export const formatBooleanToText = (bool: boolean) => (bool ? 'Yes' : '');
 
 export const navs = [
   { name: 'Overview', path: '/' },

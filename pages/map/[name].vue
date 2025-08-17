@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import GridTable2 from '@/components/GridTable2.vue';
+import GridTablePlaylists from '@/components/GridTablePlaylists.vue';
 import MapSelect from '@/components/MapSelect.vue';
 import {
   getGridTablePlaylistsColumns,
@@ -56,15 +56,15 @@ const changeView = (view: string) => {
       <h2>{{ formattedMapName }}</h2>
       <p>
         Here you can switch to a different map:
-        <MapSelect /> or
+        <MapSelect :selectedMap="selectedMap" /> or
         <button @click="pickRandomMap(rawMapsData)">pick a random* map</button>
       </p>
-      <MapDetails :selectedMap="selectedMap" />
+      <MapDetails />
       <h3>Let's Play playlists</h3>
       <p>A collection of lets play playlists on this map</p>
     </section>
     <section class="full-width grid-table-single">
-      <GridTable2
+      <GridTablePlaylists
         :columns="getGridTablePlaylistsColumns()"
         domLayout="autoHeight"
         :rows="

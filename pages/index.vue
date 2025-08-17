@@ -1,5 +1,5 @@
 <script setup>
-import GridTable from '@/components/GridTable.vue';
+import GridTableMaps from '@/components/GridTableMaps.vue';
 import {
   getGridTableMapsOverviewColumns,
   getGridTableMapsOverviewRows,
@@ -32,7 +32,7 @@ definePageMeta({
       <h2>Maps list</h2>
     </section>
     <section class="full-width">
-      <GridTable
+      <GridTableMaps
         :columns="getGridTableMapsOverviewColumns()"
         :height="514"
         :rows="getGridTableMapsOverviewRows(rawMapsData)"

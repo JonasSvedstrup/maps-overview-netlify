@@ -33,7 +33,7 @@ defineProps<{
 import { AgGridVue } from 'ag-grid-vue3';
 
 export default {
-  name: 'GridTable',
+  name: 'GridTableMaps',
   components: {
     AgGridVue,
   },

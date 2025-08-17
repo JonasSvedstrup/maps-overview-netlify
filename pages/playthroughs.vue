@@ -1,9 +1,9 @@
 <script setup>
-import GridTable2 from '@/components/GridTable2.vue';
 import {
   getGridTablePlaylistsColumns,
   getGridTablePlaylistsRows,
 } from '@/scripts/gridTable';
+import GridTablePlaylists from '~/components/GridTablePlaylists.vue';
 import rawAuthorsData from '../data/authors.json';
 import rawPlaylistsData from '../data/lets-play.json';
 </script>
@@ -26,7 +26,7 @@ import rawPlaylistsData from '../data/lets-play.json';
       </p>
     </section>
     <section class="full-width">
-      <GridTable2
+      <GridTablePlaylists
         :columns="getGridTablePlaylistsColumns()"
         :height="514"
         :rows="getGridTablePlaylistsRows(rawPlaylistsData, rawAuthorsData)"

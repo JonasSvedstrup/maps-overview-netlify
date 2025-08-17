@@ -9,11 +9,19 @@ const onChange = (event: Event) => {
     pickSelectedMap(formatMapShort(target.value));
   }
 };
+
+defineProps<{
+  selectedMap: string;
+}>();
 </script>
 
 <template>
   <select class="select" @change="onChange($event)">
-    <option v-for="map in rawMapsData" v-bind:key="map.name">
+    <option
+      v-for="map in rawMapsData"
+      v-bind:key="map.name"
+      :selected="formatMapShort(map.name) === selectedMap"
+    >
       {{ map.name }}
     </option>
   </select>
