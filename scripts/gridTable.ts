@@ -15,6 +15,7 @@ import {
 } from './util';
 
 export const getGridTableMapsOverviewColumns = (): ColDefs[] => [
+  { field: 'screenshots', headerName: 'Img', width: 60 },
   {
     field: 'name',
     width: 150,
@@ -31,7 +32,6 @@ export const getGridTableMapsOverviewColumns = (): ColDefs[] => [
   { field: 'ship', width: 90 },
   { field: 'air', width: 90 },
   { field: 'link', hide: true },
-  { field: 'screenshots' },
 ];
 
 export const getGridTableMapsOverviewRows = (
