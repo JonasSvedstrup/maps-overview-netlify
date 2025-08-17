@@ -30,6 +30,14 @@ export const mapViews: string[] = [
   'fish',
   'transport',
 ];
+export const themeViews: string[] = [
+  'All',
+  'European',
+  'Boreal',
+  'Temperate',
+  'Tropical',
+  'Winter',
+];
 export const Connections = {
   Highway: `Highway`,
   Railway: `Railway`,
